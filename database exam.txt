@@ -1,0 +1,72 @@
+mysql> create database exam
+    -> ;
+Query OK, 1 row affected (0.42 sec)
+
+mysql> create table CLient_master (ClientNO int primary key , Name varchar(70) , Address varchar(70) , City varchar(70) , State varchar(80) , bal_due int) ;
+Query OK, 0 rows affected (0.57 sec)
+
+mysql> desc client_master
+    -> ;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| ClientNO | int         | NO   | PRI | NULL    |       |
+| Name     | varchar(70) | YES  |     | NULL    |       |
+| Address  | varchar(70) | YES  |     | NULL    |       |
+| City     | varchar(70) | YES  |     | NULL    |       |
+| State    | varchar(80) | YES  |     | NULL    |       |
+| bal_due  | int         | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+6 rows in set (0.32 sec)
+
+mysql> insert into Client_master values ( 1 , 'RUDASINGWA' , 'Ruliba' , 'Rubavu'  , 'Western' , 5000 )
+    -> ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into Client_master values ( 2 , 'UWASE' , 'Kabeza' , 'Remera'  , 'Kigali' , 5200 )
+    -> ;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into Client_master values ( 3 , 'MUGISHA' , 'Kimironko' , 'Gasabo'  , 'Kigali' , 4800 )
+    -> ;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into Client_master values ( 4 , 'MURERWA' , 'Karangazi' , 'Nyagatare'  , 'Eastern' , 3900 )
+    -> ;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into Client_master values ( 5 , 'KAMASHANYA' , 'Karukogo' , 'Ruhango'  , 'Southern' , 5600 )
+    -> ;
+Query OK, 1 row affected (0.03 sec)
+
+mysql> rename table client_master to Client12
+    -> ;
+Query OK, 0 rows affected (0.30 sec)
+
+mysql> select * from client12
+    -> where bal_due > 5000
+    -> ;
++----------+------------+----------+---------+----------+---------+
+| ClientNO | Name       | Address  | City    | State    | bal_due |
++----------+------------+----------+---------+----------+---------+
+|        2 | UWASE      | Kabeza   | Remera  | Kigali   |    5200 |
+|        5 | KAMASHANYA | Karukogo | Ruhango | Southern |    5600 |
++----------+------------+----------+---------+----------+---------+
+2 rows in set (0.15 sec)
+mysql> alter table client12
+    -> rename column bal_due to BALANCE
+    -> ;
+Query OK, 0 rows affected (1.21 sec)
+Records: 0  Duplicates: 0  Warnings: 
+mysql> select * from client12
+    -> ;
++----------+------------+-----------+-----------+----------+---------+
+| ClientNO | Name       | Address   | City      | State    | BALANCE |
++----------+------------+-----------+-----------+----------+---------+
+|        1 | RUDASINGWA | Ruliba    | Rubavu    | Western  |    5000 |
+|        2 | UWASE      | Kabeza    | Remera    | Kigali   |    5200 |
+|        3 | MUGISHA    | Kimironko | Gasabo    | Kigali   |    4800 |
+|        4 | MURERWA    | Karangazi | Nyagatare | Eastern  |    3900 |
+|        5 | KAMASHANYA | Karukogo  | Ruhango   | Southern |    5600 |
++----------+------------+-----------+-----------+----------+---------+
+5 rows in set (0.01 sec)
