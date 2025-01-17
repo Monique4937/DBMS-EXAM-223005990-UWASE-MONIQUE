@@ -7,7 +7,6 @@ PART   A
 
 
 
-
 mysql> create database exam
     -> ;
 Query OK, 1 row affected (0.42 sec)
@@ -59,8 +58,8 @@ mysql> select * from client12
 +----------+------------+----------+---------+----------+---------+
 | ClientNO | Name       | Address  | City    | State    | bal_due |
 +----------+------------+----------+---------+----------+---------+
-|        2 | MONIQUE      | Gikondo | Remera  | Kigali   |    5200 |
-|        5 | KAMANZI | Nyamabuye| Muhanga| Northern|    5600 |
+|        2 | MONIQUE    | Gikondo  | Remera  | Kigali   |    5200 |
+|        5 | KAMANZI    | Nyamabuye| Muhanga | Northern |    5600 |
 +----------+------------+----------+---------+----------+---------+
 2 rows in set (0.15 sec)
 mysql> alter table client12
@@ -73,11 +72,11 @@ mysql> select * from client12
 +----------+------------+-----------+-----------+----------+---------+
 | ClientNO | Name       | Address   | City      | State    | BALANCE |
 +----------+------------+-----------+-----------+----------+---------+
-|        1 | HABIMANA | Ruliba    | Rubavu    | Western  |    5000 |
-|        2 | MONIQUE      | Gikondo   | Remera    | Kigali   |    5200 |
-|        3 | MUGABE   | Nyagatare | Nyagatare    | Eastern   |    4800 |
-|        4 | KAMURASE    |Rukomo | Nyagatare | Eastern  |    3900 |
-|        5 | KAMANZI | Nyamabuye | Muhanga   | Northern |    5600 |
+|        1 | HABIMANA   | Ruliba    | Rubavu    | Western  |    5000 |
+|        2 | MONIQUE    | Gikondo   | Remera    | Kigali   |    5200 |
+|        3 | MUGABE     | Nyagatare | Nyagatare | Eastern  |    4800 |
+|        4 | KAMURASE   |Rukomo     | Nyagatare | Eastern  |    3900 |
+|        5 | KAMANZI    | Nyamabuye | Muhanga   | Northern |    5600 |
 +----------+------------+-----------+-----------+----------+---------+
 5 rows in set (0.01 sec)
 
@@ -186,10 +185,10 @@ mysql> select * from employees
 +-------------+------------+-----------+--------------------+--------+---------------+
 | employee_ID | first_name | last_name | email_address      | gender | department_ID |
 +-------------+------------+-----------+--------------------+--------+---------------+
-|         111 | Yves     | Mutesi   | mutesi@gmail.com  | F      |             1 |
-|         222 | Yvonne     | Rusaro  | rusaro@gmail.com | F      |             2 |
+|         111 | Yves       | Mutesi    | mutesi@gmail.com   | F      |             1 |
+|         222 | Yvonne     | Rusaro    | rusaro@gmail.com   | F      |             2 |
 |         333 | Claude     | Sezereno  | sezerano@gmail.com | M      |             3 |
-|         444 | Muvara      | Kariza   | kariza@gmail.com    | M      |             4 |
+|         444 | Muvara     | Kariza    | kariza@gmail.com   | M      |             4 |
 +-------------+------------+-----------+--------------------+--------+---------------+
 
 
@@ -201,10 +200,10 @@ mysql> SELECT first_name, last_name, department_name
 +------------+-----------+-----------------+
 | first_name | last_name | department_name |
 +------------+-----------+-----------------+
-| Yves    | Mutesi  | human resource  |
-| Yvonne     | Rusaro  | sales           |
+| Yves       | Mutesi    | human resource  |
+| Yvonne     | Rusaro    | sales           |
 | Claude     | Sezereno  | marketing       |
-| Muvara      | Kariza    | production      |
+| Muvara     | Kariza    | production      |
 +------------+-----------+-----------------+
 
 
@@ -217,10 +216,10 @@ mysql> SELECT first_name, last_name, department_name
 +------------+-----------+-----------------+
 | first_name | last_name | department_name |
 +------------+-----------+-----------------+
-| Yves     | Mutesi   | human resource  |
-| Yvonne     | Rusaro  | sales           |
+| Yves       | Mutesi    | human resource  |
+| Yvonne     | Rusaro    | sales           |
 | Claude     | Sezereno  | marketing       |
-| Muvara      | Kariza    | production      |
+| Muvara     | Kariza    | production      |
 +------------+-----------+-----------------+
 
 
@@ -257,10 +256,10 @@ mysql> select * from employees
 +-------------+------------+-----------+--------------------+--------+---------------+--------+
 | employee_ID | first_name | last_name | email_address      | gender | department_ID | salary |
 +-------------+------------+-----------+--------------------+--------+---------------+--------+
-|         111 | Yves     | Mutesi   | mutesi@gmail.com  | F      |             1 |  50000 |
-|         222 | Yvonne     | Rusaro  | rusaro@gmail.com | F      |             2 |  70000 |
+|         111 | Yves       | Mutesi    | mutesi@gmail.com   | F      |             1 |  50000 |
+|         222 | Yvonne     | Rusaro    | rusaro@gmail.com   | F      |             2 |  70000 |
 |         333 | Claude     | Sezereno  | sezerano@gmail.com | M      |             3 |  90000 |
-|         444 | Muvara      |Kariza    | kariza@gmail.com    | M      |             4 |  40000 |
+|         444 | Muvara     |Kariza     | kariza@gmail.com   | M      |             4 |  40000 |
 +-------------+------------+-----------+--------------------+--------+---------------+--------+
 
 mysql> SELECT employee_ID, first_name, last_name, salary
@@ -270,8 +269,8 @@ mysql> SELECT employee_ID, first_name, last_name, salary
 +-------------+------------+-----------+--------+
 | employee_ID | first_name | last_name | salary |
 +-------------+------------+-----------+--------+
-|         222 | Yvonne     | Rusaro  |  70000 |
-|         333 | Claude    | Sezereno  |  90000 |
+|         222 | Yvonne     | Rusaro    |  70000 |
+|         333 | Claude     | Sezereno  |  90000 |
 +-------------+------------+-----------+--------+
 
 
